@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Library</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The Library Project, from Odin!</h1>
+    <div class="container">
+        <h2 class="sub-heading">ADD YOUR BOOK</h2>
+        <div class="form-section">
+            
+            <form id="my_form">
+                <label for="bookTitle">Book Title</label>
+                <input type="text" name="bookTitle" id="bookTitle">
+                <br>
+                <br>
+
+                <label for="bookAuthor">Book Author</label>
+                <input type="text" name="bookAuthor" id="bookAuthor">
+                <br>
+                <br>
+
+                <label for="bookPages">Book Pages</label>
+                <input type="number" name="bookPages" id="bookPages">
+                <br>
+                <br>
+                
+                    <label for="bookStatus">Book Status</label>
+                <div class="status">
+                    <input type="radio" name="bookStatus" id="bookStatus" value="Read">
+                    <label for="Read">Read</label>
+                
+
+                    <input type="radio" name="bookStatus" id="bookStatus" value="Not Read Yet">
+                    <label for="Not Read Yet">Not Read Yet</label>
+                </div>
+               
+
+                <br>
+                <br>
+
+                <div class="button">
+                    <button type="submit" id="formSubmit" class="btn-submit">Submit</button>
+                <br>
+                <button type="reset" id="formReset" class="btn-reset">Reset</button>
+                </div>
+
+                
+
+            </form>
+        </div>
+        
+    </div>
+    <h1 class="heading">Your Books</h1>
+    <div class="book-list">
+        
+    </div> 
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
