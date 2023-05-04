@@ -118,6 +118,7 @@ input[type="radio"]{
     font-size: 18px;
     border-radius: 8px;
     color: #fff;
+    margin-bottom: 10px;
 }
 .btn-submit{
     background-color: #0c4a6e;
