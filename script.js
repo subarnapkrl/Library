@@ -1,7 +1,7 @@
 let myLibrary=[];
 // console.log(myLibrary)
 
-Book.counter=1;
+Book.counter=0;
 
 function Book(title,author,pages,status,id)
 {
@@ -10,6 +10,21 @@ function Book(title,author,pages,status,id)
     this.pages=pages;
     this.status=status;
     this.id=Book.counter++;
+}
+
+          
+// Add a method to toggle the read status of the book
+Book.prototype.toggleReadStatus = function() {
+     
+     if(this.status=="Read")
+     {
+        this.status="Not Read Yet"
+     }else if(this.status=="Not Read Yet")
+     {
+        this.status="Read"
+     }
+
+    
 }
 
 
@@ -118,34 +133,21 @@ myLibrary.forEach((book)=>{
     modifyBtn.classList.add("modifyBtn");
     modifyBtn.setAttribute("data-index",book.id)
 
-    modifyBtn.addEventListener("click",toggleReadStatus)
-
-    Book.prototype=Object.create(Book.prototype);
-    let toggleBook=new Book(booksTitle,booksAuthor,booksPages,booksStatus);
-    console.log(toggleBook)
-            
-// Add a method to toggle the read status of the book
-Book.prototype.toggleReadStatus = function() {
-     this.status = !this.status;
+    modifyBtn.addEventListener("click",handleToggleClick)
 
     
+  
+  function handleToggleClick(e)
+  {
+    let id=Number(e.target.getAttribute("data-index"));
+    //console.log(id)
+    myLibrary[id].toggleReadStatus()
+    //console.log(book.status)
+    bookStatus.innerHTML=`<span class="title">Book Status:-</span>  <span class="para"> ${book.status}  </span>`
+
   }
    
 
-    function toggleReadStatus()
-     {
-       
-        
-
-            toggleBook.toggleReadStatus();
-        
-
-       
-
-        
-
-       
-    }
 //
 
     
@@ -170,10 +172,10 @@ Book.prototype.toggleReadStatus = function() {
    {
     
     let id=Number(event.target.getAttribute("data-index"));
-    console.log(id);
+    //console.log(id);
 
     const index=myLibrary.findIndex((book)=>book.id===id)
-    console.log(index);
+    //console.log(index);
     
 
     if (index !== -1) {
@@ -194,7 +196,7 @@ Book.prototype.toggleReadStatus = function() {
     bookPages.innerHTML=`<span class="title">Book Pages:-</span>   <span class="para"> ${book.pages}  </span> `
     bookStatus.innerHTML=`<span class="title">Book Status:-</span>  <span class="para"> ${book.status}  </span>`
 
-    console.log(bookStatus)
+    //console.log(bookStatus)
 
 
     bookListli.appendChild(bookTitle);
