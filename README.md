@@ -1,6 +1,8 @@
 # Library
 Library made using HTML5 , CSS3 and Vanilla JavaScript
 
+Made Using the concept of PROTOTYPAL INHERITANCE and CONSTRUCTOR
+
 Live Website: https://subarnapkrl.github.io/Library/
 
 ScreenShot:
